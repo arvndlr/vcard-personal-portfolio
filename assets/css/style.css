@@ -818,7 +818,18 @@ main {
   filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
   transition: filter 0.3s;
 }
-
+.clients-item img[src$="java.png"]:hover {
+  filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
+  transition: filter 0.3s;
+}
+.clients-item img[src$="csharp.png"]:hover {
+  filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
+  transition: filter 0.3s;
+}
+.clients-item img[src$="javascript.png"]:hover {
+  filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
+  transition: filter 0.3s;
+}
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
