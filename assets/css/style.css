@@ -46,8 +46,8 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right,
-    hsl(45, 100%, 72%),
-    hsl(35, 100%, 68%)
+    hsl(220, 100%, 72%),
+    hsl(256, 100%, 68%)
   );
 
   /* solid */
@@ -59,8 +59,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --orange-yellow-crayola: hsl(238, 83%, 53%);
+  --vegas-gold: hsl(242, 60%, 46%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -814,20 +814,19 @@ main {
 }
 
 /* Change color of python.png on hover */
-.clients-item img[src$="python.png"]:hover {
-  filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
-  transition: filter 0.3s;
-}
-.clients-item img[src$="java.png"]:hover {
-  filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
-  transition: filter 0.3s;
-}
-.clients-item img[src$="csharp.png"]:hover {
-  filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
-  transition: filter 0.3s;
-}
+/* Consolidation for cleaner, more readable code */
+.clients-item img[src$="python.png"]:hover,
+.clients-item img[src$="java.png"]:hover,
+.clients-item img[src$="csharp.png"]:hover,
 .clients-item img[src$="javascript.png"]:hover {
-  filter: grayscale(0) sepia(1) saturate(5) hue-rotate(-25deg) brightness(1.1);
+  /* * Adjusted filters to create a strong blue/violet effect.
+   * - grayscale(0): Removes the initial grayscale effect.
+   * - hue-rotate(220deg): A value around 220deg shifts the hue towards blue/violet.
+   * - saturate(4): A high saturation for a vibrant look.
+   * - brightness(1.2): A slight increase in brightness.
+   * Note: Achieving an exact hex color with filters is not feasible. 
+   */
+  filter: grayscale(0) hue-rotate(220deg) saturate(4) brightness(1.2);
   transition: filter 0.3s;
 }
 /*-----------------------------------*\
